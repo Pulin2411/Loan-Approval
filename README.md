@@ -1,38 +1,38 @@
 ### Project overview
-- Purpose: brief description of a Streamlit app that loads a pre-trained model and predicts loan approval from user inputs.[1]
-- Features: interactive form, manual encoding, scaler-based preprocessing, single-click prediction.[1]
-- Architecture note: model, scaler, and optional label encoder loaded from a pickle tuple.[1]
+- Purpose: brief description of a Streamlit app that loads a pre-trained model and predicts loan approval from user inputs.
+- Features: interactive form, manual encoding, scaler-based preprocessing, single-click prediction.
+- Architecture note: model, scaler, and optional label encoder loaded from a pickle tuple.
 
 ### Repository structure
-- app.py (or app-3.py): Streamlit UI and inference logic.[1]
-- loan_approval_model.pkl: expected tuple (model, scaler, le).[1]
-- requirements.txt: Python dependencies.[2]
+- app.py (or app-3.py): Streamlit UI and inference logic.
+- loan_approval_model.pkl: expected tuple (model, scaler, le).
+- requirements.txt: Python dependencies.
 
 ### Technical requirements
-- Python version: recommend 3.10+ (ensure scikit-learn compatibility).[2]
-- Dependencies: streamlit, scikit-learn==1.7.1, pandas, numpy, pymysql.[2]
-- OS: Linux, macOS, Windows.[2]
-- Model artifact: loan_approval_model.pkl available at project root.[1]
+- Python version: recommend 3.10+ (ensure scikit-learn compatibility).
+- Dependencies: streamlit, scikit-learn==1.7.1, pandas, numpy, pymysql.
+- OS: Linux, macOS, Windows.
+- Model artifact: loan_approval_model.pkl available at project root.
 
 ### Installation
-- Create a virtual environment and install dependencies with pip install -r requirements.txt.[2]
-- Place loan_approval_model.pkl in the repository root.[1]
+- Create a virtual environment and install dependencies with pip install -r requirements.txt.
+- Place loan_approval_model.pkl in the repository root.
 
 ### Running locally
-- Command: streamlit run app.py (or streamlit run app-3.py).[1]
-- Access via the local URL provided by Streamlit.[1]
+- Command: streamlit run app.py (or streamlit run app-3.py).
+- Access via the local URL provided by Streamlit.
 
 ### Input schema and encodings
 - Document each field and encoding: gender, married, dependents, education, self_employed, incomes, loan_amount, loan_term, credit_history, property_area.[1]
-- Specify encoding maps and that a scaler.transform is applied before prediction.[1]
+- Specify encoding maps and that a scaler.transform is applied before prediction.
 
 ### Model contract
-- Pickle contents and order: (model, scaler, le).[1]
-- Required methods: model.predict, scaler.transform; le currently unused.[1]
+- Pickle contents and order: (model, scaler, le).
+- Required methods: model.predict, scaler.transform; le currently unused.
 
 ### Deployment
-- Streamlit Community Cloud: file naming (app.py), requirements.txt usage, adding model file.[2][1]
-- Optional Docker guidance: copy app, requirements, and pickle; run streamlit.[2][1]
+- Streamlit Community Cloud: file naming (app.py), requirements.txt usage, adding model file.
+- Optional Docker guidance: copy app, requirements, and pickle; run streamlit.
 
 
 
