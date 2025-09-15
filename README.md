@@ -1,3 +1,41 @@
+### Project overview
+- Purpose: brief description of a Streamlit app that loads a pre-trained model and predicts loan approval from user inputs.[1]
+- Features: interactive form, manual encoding, scaler-based preprocessing, single-click prediction.[1]
+- Architecture note: model, scaler, and optional label encoder loaded from a pickle tuple.[1]
+
+### Repository structure
+- app.py (or app-3.py): Streamlit UI and inference logic.[1]
+- loan_approval_model.pkl: expected tuple (model, scaler, le).[1]
+- requirements.txt: Python dependencies.[2]
+
+### Technical requirements
+- Python version: recommend 3.10+ (ensure scikit-learn compatibility).[2]
+- Dependencies: streamlit, scikit-learn==1.7.1, pandas, numpy, pymysql.[2]
+- OS: Linux, macOS, Windows.[2]
+- Model artifact: loan_approval_model.pkl available at project root.[1]
+
+### Installation
+- Create a virtual environment and install dependencies with pip install -r requirements.txt.[2]
+- Place loan_approval_model.pkl in the repository root.[1]
+
+### Running locally
+- Command: streamlit run app.py (or streamlit run app-3.py).[1]
+- Access via the local URL provided by Streamlit.[1]
+
+### Input schema and encodings
+- Document each field and encoding: gender, married, dependents, education, self_employed, incomes, loan_amount, loan_term, credit_history, property_area.[1]
+- Specify encoding maps and that a scaler.transform is applied before prediction.[1]
+
+### Model contract
+- Pickle contents and order: (model, scaler, le).[1]
+- Required methods: model.predict, scaler.transform; le currently unused.[1]
+
+### Deployment
+- Streamlit Community Cloud: file naming (app.py), requirements.txt usage, adding model file.[2][1]
+- Optional Docker guidance: copy app, requirements, and pickle; run streamlit.[2][1]
+
+
+
 ### About Author
 Pulin Shah — Lead IT Support Coordinator | IT Service Delivery | n8n Automations |ML|DL|Data Science|Prompt Enigneering|RAG|Gen-AI|EDA
 
